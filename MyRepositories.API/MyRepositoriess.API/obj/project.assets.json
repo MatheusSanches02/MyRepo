@@ -720,11 +720,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Matheus Sanches\\OneDrive\\Área de Trabalho\\MyRepo\\MyRepositoriess.API\\MyRepositoriess.API\\MyRepositories.API.csproj",
+      "projectUniqueName": "C:\\Users\\Matheus Sanches\\OneDrive\\Área de Trabalho\\MyRepo\\MyRepositories.API\\MyRepositoriess.API\\MyRepositories.API.csproj",
       "projectName": "MyRepositories.API",
-      "projectPath": "C:\\Users\\Matheus Sanches\\OneDrive\\Área de Trabalho\\MyRepo\\MyRepositoriess.API\\MyRepositoriess.API\\MyRepositories.API.csproj",
+      "projectPath": "C:\\Users\\Matheus Sanches\\OneDrive\\Área de Trabalho\\MyRepo\\MyRepositories.API\\MyRepositoriess.API\\MyRepositories.API.csproj",
       "packagesPath": "C:\\Users\\Matheus Sanches\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Matheus Sanches\\OneDrive\\Área de Trabalho\\MyRepo\\MyRepositoriess.API\\MyRepositoriess.API\\obj\\",
+      "outputPath": "C:\\Users\\Matheus Sanches\\OneDrive\\Área de Trabalho\\MyRepo\\MyRepositories.API\\MyRepositoriess.API\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
