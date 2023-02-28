@@ -1,9 +1,8 @@
-﻿using MyRepositories.API.Interface;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 
-namespace MyRepositoriess.API.Models
+namespace MyRepositories.API.Models
 {
-    public class Repos : IRepos
+    public class Repos
     {
         public int Id { get; }
         public string Name { get; set; } = String.Empty;
