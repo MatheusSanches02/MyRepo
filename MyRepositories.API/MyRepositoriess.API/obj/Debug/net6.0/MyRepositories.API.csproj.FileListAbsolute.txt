@@ -66,3 +66,5 @@ C:\Users\Matheus Sanches\OneDrive\Área de Trabalho\MyRepo\MyRepositories.API\My
 C:\Users\Matheus Sanches\OneDrive\Área de Trabalho\MyRepo\MyRepositories.API\MyRepositoriess.API\obj\Debug\net6.0\MyRepositories.API.pdb
 C:\Users\Matheus Sanches\OneDrive\Área de Trabalho\MyRepo\MyRepositories.API\MyRepositoriess.API\obj\Debug\net6.0\MyRepositories.API.genruntimeconfig.cache
 C:\Users\Matheus Sanches\OneDrive\Área de Trabalho\MyRepo\MyRepositories.API\MyRepositoriess.API\obj\Debug\net6.0\ref\MyRepositories.API.dll
+C:\Users\Matheus Sanches\OneDrive\Área de Trabalho\MyRepo\MyRepositories.API\MyRepositoriess.API\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\Matheus Sanches\OneDrive\Área de Trabalho\MyRepo\MyRepositories.API\MyRepositoriess.API\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll

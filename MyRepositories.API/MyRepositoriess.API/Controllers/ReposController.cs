@@ -10,9 +10,9 @@ namespace MyRepositories.API.Controllers
     [ApiController]
     public class ReposController : ControllerBase
     {
-        private readonly ReposRepository _reposRepository;
+        private readonly IReposRepository _reposRepository;
 
-        public ReposController(ReposRepository reposRepository)
+        public ReposController(IReposRepository reposRepository)
         {
             _reposRepository = reposRepository;
         }
@@ -126,7 +126,7 @@ namespace MyRepositories.API.Controllers
             }
         }
 
-        private static async Task<IEnumerable<Repos>> SelectRepositoriesAsync(ReposRepository _reposRepository)
+        private static async Task<IEnumerable<Repos>> SelectRepositoriesAsync(IReposRepository _reposRepository)
         {
             return await _reposRepository.GetAllRepositoriesAsync();
         }

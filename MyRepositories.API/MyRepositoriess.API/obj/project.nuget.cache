@@ -1,11 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "WbVxKJd+Yegb8JSfOM9el52J7dEC7w0SAqC5obUaB9G02DidPWuZSMHsnLSIM7HjK7A6jECvRdb4//zpnuR3QQ==",
+  "dgSpecHash": "aVaFRdOJtVGOu9CpLKw75dyL8KLFXyNdtbB9sDeK7J/bmFUnNzvk7DZwRS46fwcPvPq+CBO8FZw8Im/wN0mSNQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Matheus Sanches\\OneDrive\\Área de Trabalho\\MyRepo\\MyRepositories.API\\MyRepositoriess.API\\MyRepositories.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Matheus Sanches\\.nuget\\packages\\dapper\\2.0.123\\dapper.2.0.123.nupkg.sha512",
     "C:\\Users\\Matheus Sanches\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "C:\\Users\\Matheus Sanches\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\7.0.0\\microsoft.extensions.dependencyinjection.7.0.0.nupkg.sha512",
+    "C:\\Users\\Matheus Sanches\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\7.0.0\\microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512",
     "C:\\Users\\Matheus Sanches\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\Matheus Sanches\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
     "C:\\Users\\Matheus Sanches\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
