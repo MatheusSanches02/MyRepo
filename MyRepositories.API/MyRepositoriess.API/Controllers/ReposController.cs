@@ -86,8 +86,11 @@ namespace MyRepositories.API.Controllers
         {
             try
             {
-                if (id != repo.Id)
-                    return BadRequest("O id informado na URL não é o mesmo do objeto enviado no corpo da requisição.");
+                var repoId = await _reposRepository.GetRepositoryByIdAsync(id);
+                if (repoId == null)
+                    return NotFound();
+
+                repo.Id = id;
 
                 var repos = await _reposRepository.UpdateRepositoryAsync(repo);
                 return Ok(repos);
