@@ -1,4 +1,3 @@
-using Microsoft.Extensions.DependencyInjection;
 using MyRepositories.API.Repository;
 
 var builder = WebApplication.CreateBuilder(args);
