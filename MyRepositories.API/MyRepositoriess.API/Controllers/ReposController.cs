@@ -130,7 +130,21 @@ namespace MyRepositories.API.Controllers
             }
         }
 
-        [HttpPost("favorite")]
+        [HttpGet("favorite")]
+        public async Task<IActionResult> GetFavoriteAsync()
+        {
+            try
+            {
+                var favorite = await _reposRepository.GetFavoritesAsync();
+                return Ok(favorite);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
+            }
+        }
+
+        [HttpPost("addFavorite")]
         public async Task<IActionResult> FavoriteRepoAsync(Repos repo)
         {
             try

@@ -14,5 +14,6 @@ namespace MyRepositories.API.Repository
         Task<bool> DeleteRepositoryAsync(int id);
         Task<bool> DeleteAllRepositoriesAsync();
         Task<bool> FavoriteRepoAsync(Repos repository);
+        Task<IEnumerable<Repos>> GetFavoritesAsync();
     }
 }

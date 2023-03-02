@@ -63,8 +63,13 @@ namespace MyRepositories.API.Repository
         public async Task<bool> FavoriteRepoAsync(Repos repo)
         {
             using IDbConnection connection = new SqlConnection(_connectionString);
-            var affectedRows = await connection.ExecuteAsync("INSERT INTO favorite (name, description, language, lastupdate, repositorieowner) VALUES (@Name, @Description, @Language, @LastUpdate, @RepositorieOwner)", repo);
+            var affectedRows = await connection.ExecuteAsync("INSERT INTO favorite (RepoId) VALUES (@Id)", repo);
             return affectedRows > 0;
+        }
+        public async Task<IEnumerable<Repos>> GetFavoritesAsync()
+        {
+            using IDbConnection connection = new SqlConnection(_connectionString);
+            return await connection.QueryAsync<Repos>("SELECT R.Name FROM repos R INNER JOIN favorite F ON R.Id = F.RepoId");
         }
     }
 }
