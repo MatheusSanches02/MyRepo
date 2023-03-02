@@ -60,5 +60,11 @@ namespace MyRepositories.API.Repository
             var affectedRows = await connection.ExecuteAsync("DELETE FROM repos");
             return affectedRows > 0;
         }
+        public async Task<bool> FavoriteRepoAsync(Repos repo)
+        {
+            using IDbConnection connection = new SqlConnection(_connectionString);
+            var affectedRows = await connection.ExecuteAsync("INSERT INTO favorite (name, description, language, lastupdate, repositorieowner) VALUES (@Name, @Description, @Language, @LastUpdate, @RepositorieOwner)", repo);
+            return affectedRows > 0;
+        }
     }
 }

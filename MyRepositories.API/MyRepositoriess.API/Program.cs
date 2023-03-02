@@ -9,6 +9,12 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+#region [Cors]
+builder.Services.AddCors(c => c.AddPolicy("CorsPolicy", build =>
+{
+    build.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader();
+}));
+#endregion
 
 var app = builder.Build();
 
@@ -20,6 +26,10 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+#region [Cors]
+app.UseCors("CorsPolicy");
+#endregion
 
 app.UseAuthorization();
 

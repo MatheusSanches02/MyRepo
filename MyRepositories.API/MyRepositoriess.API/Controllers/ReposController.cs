@@ -1,4 +1,5 @@
 ﻿using Dapper;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using MyRepositories.API.Models;
 using MyRepositories.API.Repository;
@@ -31,12 +32,12 @@ namespace MyRepositories.API.Controllers
             }
         }
 
-        [HttpGet("name/{nameFilter}")]
-        public async Task<IActionResult> GetRepositorieByNameAsync(string nameFilter)
+        [HttpGet("findName/{repoName}")]
+        public async Task<IActionResult> GetRepositorieByNameAsync(string repoName)
         {
             try
             {
-                var name = await _reposRepository.GetRepositoriesByNameAsync(nameFilter);
+                var name = await _reposRepository.GetRepositoriesByNameAsync(repoName);
                 if(name == null)
                 {
                     return NotFound();
@@ -49,7 +50,7 @@ namespace MyRepositories.API.Controllers
             }
         }
 
-        [HttpGet("{repoId}")]
+        [HttpGet("findId/{repoId}")]
         public async Task<IActionResult> GetRepositorieByIdAsync(int repoId)
         {
             try
@@ -67,7 +68,7 @@ namespace MyRepositories.API.Controllers
             }
         }
 
-        [HttpPost]
+        [HttpPost("create")]
         public async Task<IActionResult> CreateRepositorieAsync(Repos repo)
         {
             try
@@ -81,7 +82,7 @@ namespace MyRepositories.API.Controllers
             }
         }
 
-        [HttpPut]
+        [HttpPut("update")]
         public async Task<IActionResult> UpdateRepositoryAsync(int id, Repos repo)
         {
             try
@@ -101,7 +102,7 @@ namespace MyRepositories.API.Controllers
             }
         }
 
-        [HttpDelete("{repoId}")]
+        [HttpDelete("deleteId/{repoId}")]
         public async Task<IActionResult> DeleteRepositoryAsync(int repoId)
         {
             try
@@ -115,13 +116,27 @@ namespace MyRepositories.API.Controllers
             }
         }
 
-        [HttpDelete]
+        [HttpDelete("delete")]
         public async Task<IActionResult> DeleteAllRepositoriesAsync()
         {
             try
             {
                 var repos = await _reposRepository.DeleteAllRepositoriesAsync();
                 return Ok(repos);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
+            }
+        }
+
+        [HttpPost("favorite")]
+        public async Task<IActionResult> FavoriteRepoAsync(Repos repo)
+        {
+            try
+            {
+                var favorite = await _reposRepository.FavoriteRepoAsync(repo);
+                return Ok(favorite);
             }
             catch (Exception ex)
             {
