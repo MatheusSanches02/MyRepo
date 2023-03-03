@@ -12,6 +12,6 @@ namespace MyRepositories.API.Models
         [DataType(DataType.DateTime)]
         [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:yyyy-MM-dd HH:mm:ss}")]
         public DateTime LastUpdate { get; set; } = DateTime.Now;
-        public string? RepositorieOwner { get; set; } 
+        public string? RepositorieOwner { get; set; } = "Sem dono declarado";
     }
 }
